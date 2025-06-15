@@ -13,3 +13,10 @@ spring:
         show_sql: true
         format_sql: true
     open-in-view: false
+  batch:
+    job.enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure.include: '*'
