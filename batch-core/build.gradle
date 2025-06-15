@@ -1,0 +1,16 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    runtimeOnly 'com.mysql:mysql-connector-j:8.4.0'
+
+    implementation 'org.apache.poi:poi-ooxml:5.2.5'    // XLSX Reader
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.test {
+    jvmArgs '-Xms512m', '-Xmx2g'   // 초기 512 MB, 최대 2 GB
+}

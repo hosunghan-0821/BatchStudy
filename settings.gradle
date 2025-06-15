@@ -1,0 +1,3 @@
+rootProject.name = 'batch_study'
+include 'batch-core'
+
