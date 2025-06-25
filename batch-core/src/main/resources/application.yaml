@@ -1,4 +1,6 @@
 spring:
+  main:
+    web-application-type: none
   datasource:
     url: jdbc:mysql://localhost:3306/batch_study?characterEncoding=utf8&serverTimezone=Asia/Seoul
     username: root
@@ -14,9 +16,15 @@ spring:
         format_sql: true
     open-in-view: false
   batch:
-    job.enabled: false
+    job:
+      enabled: true
+      name: ${job.name}
+    jdbc:
+      initialize-schema: always
 
 management:
   endpoints:
     web:
       exposure.include: '*'
+
+
